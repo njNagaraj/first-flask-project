@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nj Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+      #banner{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+      }
+      h6{
+        color : gray;
+      }
+      b{
+        color: black;
+        font-family : Arial;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class = "container">
+      <h1 class="p-2 bg-danger-subtle text-emphasis-danger mb-0 rounded text-center">Career Website</h1>
+      
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Infrastructure</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-disabled="true">Contact</a>
+        </li>
+      </ul>
+      
+      <img class = "rounded mb-2" id = "banner" src = "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique. Cursus risus at ultrices mi tempus imperdiet. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Tempus quam pellentesque nec nam aliquam. Consectetur adipiscing elit pellentesque habitant morbi tristique. Et malesuada fames ac turpis egestas.
+      </p>
+      <h2 class = "text-center mt-2 mb-4">Open Position</h2>
+      <div>
+        {% for job in JOBS %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class = "text-center">
+        <button class="btn btn-secondary mt-3 ">Contact Us</button>
+        <p class = "mt-3">Copyrights 2023, Nj</p>
+      </div>
+    </div>
+  </body>
+</html>
